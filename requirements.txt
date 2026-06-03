@@ -1,0 +1,20 @@
+# ---------------------------------------------------------------------------
+# Core dependencies (required for benchmark evaluation + data synthesis)
+# ---------------------------------------------------------------------------
+openai>=1.30.0          # OpenAI-compatible chat / tool-calling client
+httpx>=0.27.0           # Direct REST calls (Gemini provider, retries)
+python-dotenv>=1.0.0    # Loads API credentials from a .env file
+tqdm>=4.66.0            # Progress bars
+numpy>=1.24.0           # Numeric helpers
+polars>=0.20.0          # Fast tabular I/O used by the synthesis pipeline
+scikit-learn>=1.3.0     # Optional env clustering / dedup (Environment_builder)
+jsonpickle>=3.0.0       # Robust (de)serialization of environment state
+
+# ---------------------------------------------------------------------------
+# Optional dependencies — local HuggingFace model evaluation
+# (eval/run_eval_local.py only). Uncomment / install separately if needed.
+# ---------------------------------------------------------------------------
+# transformers>=4.43.0
+# torch>=2.1.0
+# accelerate>=0.30.0
+# bitsandbytes>=0.44.0  # 4-bit quantisation (--load-in-4bit)
